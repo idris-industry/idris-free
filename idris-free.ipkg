@@ -1,4 +1,4 @@
-package idris_free
+package idris-free
 
 modules = Control.Monad.Free
         , Control.Monad.Freer
