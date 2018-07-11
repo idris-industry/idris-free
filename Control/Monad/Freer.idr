@@ -9,7 +9,7 @@ import Data.CoList
 
 -- ported from https://github.com/robrix/freer-cofreer
 
-data Freer : ( Type -> Type) -> Type -> Type where
+data Freer : (Type -> Type) -> Type -> Type where
   Pure : a -> Freer f a
   Bind : f x -> (x -> Freer f a) -> Freer f a
 
