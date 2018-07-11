@@ -9,7 +9,7 @@ import Data.CoList
 
 -- ported from https://github.com/robrix/freer-cofreer
 
-data Freer : (f : Type -> Type) -> (a : Type) -> Type where
+data Freer : ( Type -> Type) -> Type -> Type where
   Pure : a -> Freer f a
   Bind : f x -> (x -> Freer f a) -> Freer f a
 
@@ -101,6 +101,8 @@ freerSteps refine r = case stepFreer refine r of
 retract : Monad m => Freer m a -> m a
 retract = iterFreerA (=<<)
 
+|||given a natural transformation f: {x : Type} -> f x -> m x (f x ~> m x in Scala cats) ,provides a monad morphism
+|||usage : https://typelevel.org/cats/datatypes/freemonad.html
 foldFreer : Monad m => ({x : Type} -> f x -> m x) -> Freer f a -> m a
 foldFreer f = retract . hoistFreer f
 
