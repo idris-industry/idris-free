@@ -4,5 +4,6 @@ modules = Control.Monad.Free
         , Control.Monad.Freer
         , Control.Monad.Codensity
         , Data.Functor.Coyoneda
+	, Control.Kan
 
 opts = "-p contrib"
