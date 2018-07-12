@@ -101,8 +101,7 @@ freerSteps refine r = case stepFreer refine r of
 retract : Monad m => Freer m a -> m a
 retract = iterFreerA (=<<)
 
-|||given a natural transformation f: {x : Type} -> f x -> m x (f x ~> m x in Scala cats) ,provides a monad morphism
-|||usage : https://typelevel.org/cats/datatypes/freemonad.html
+||| Given a natural transformation f: {x : Type} -> f x -> m x , provides a monad morphism. examples available for Scala cats
 foldFreer : Monad m => ({x : Type} -> f x -> m x) -> Freer f a -> m a
 foldFreer f = retract . hoistFreer f
 
