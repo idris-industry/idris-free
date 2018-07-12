@@ -1,5 +1,9 @@
 module Control.Monad.Id
 
+%default total
+%access public export
+
+
 data Id : (a : Type)-> Type where
   IdF : (x : a) -> Id a
 
