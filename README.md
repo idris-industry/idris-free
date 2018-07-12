@@ -1,4 +1,4 @@
-Free/Freer Monads,coyonda,kan extensions
+Free/Freer Monads,Id monad (helper for free monad),coyonda,kan extensions
 
 # theory
 
