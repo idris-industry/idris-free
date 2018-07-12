@@ -1,4 +1,4 @@
-Free Monads and useful constructions to work with them
+Free/Freer Monads,coyonda,kan extensions
 
 # theory
 
